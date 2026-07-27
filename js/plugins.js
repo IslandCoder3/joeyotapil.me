@@ -332,6 +332,123 @@
     });
   }
 
+  /* ---- Portfolio: data-driven project grid ---- */
+  // Add as many projects as you have — just extend this array.
+  // img: screenshot path · alt: image alt text · title: display label for the link
+  // url: live site link · desc: 1-2 sentence summary of the work · tools: array of tags
+  //
+  // NOTE: the desc/tools below are placeholders inferred from the site names/screenshots —
+  // swap in the real scope of work and actual stack for each project before publishing.
+  const PROJECTS = [
+    {
+      img: 'images/lob.webp',
+      alt: 'Bayanihan LOB-DP',
+      title: 'localized-online-bayanihan.infinityfree.me',
+      url: 'https://localized-online-bayanihan.infinityfree.me/',
+      category: 'Nonprofit / Community',
+      desc: 'Community disaster-preparedness platform built to help local groups coordinate emergency response; led a full public-facing redesign with a Philippine-inspired visual system.',
+      tools: ['PHP', 'MySQL', 'HTML', 'CSS', 'JavaScript']
+    },
+    {
+      img: 'images/bsit.webp',
+      alt: 'University of San Carlos',
+      title: 'usc.edu.ph',
+      url: 'https://www.usc.edu.ph',
+      category: 'Education',
+      desc: 'Front-end development and maintenance for a university-scale website, translating design updates into responsive, cross-browser pages for thousands of daily visitors.',
+      tools: ['HTML', 'CSS', 'JavaScript']
+    },
+    {
+      img: 'images/output3.webp',
+      alt: 'Dynamic Therapy',
+      title: 'welovedynamictherapy.com',
+      url: 'https://welovedynamictherapy.com/virtualservices',
+      category: 'Healthcare',
+      desc: 'Virtual-services landing page for a therapy practice, designed to convert visitors into booked consultations with a calm, trust-building layout.',
+      tools: ['HTML5', 'CSS3', 'JavaScript', 'WordPress']
+    },
+    {
+      img: 'images/output4.webp',
+      alt: 'Famcor Consultants',
+      title: 'famcorconsultants.com',
+      url: 'https://www.famcorconsultants.com/',
+      category: 'Corporate / Consulting',
+      desc: 'Corporate site for a consulting firm, built to present services and credibility clearly for prospective B2B clients.',
+      tools: ['HTML5', 'CSS3', 'JavaScript', 'PHP']
+    },
+    {
+      img: 'images/output5.webp',
+      alt: 'Kabayan Filipino Market',
+      title: 'kabayanfilipinomarket.com',
+      url: 'https://www.kabayanfilipinomarket.com',
+      category: 'E-Commerce / Retail',
+      desc: 'Storefront site for a Filipino grocery market, showcasing products and store info in a responsive, easy-to-browse layout.',
+      tools: ['HTML5', 'CSS3', 'JavaScript', 'WordPress']
+    }
+    // { img: 'images/outputN.png', alt: '...', title: '...', url: '...', category: '...', desc: '...', tools: ['...'] },
+  ];
+
+  const PORTFOLIO_PAGE_SIZE = 3; // how many project cards show initially / per "Load More" click
+  let portfolioVisibleCount = 0;
+
+  const portfolioGrid = document.getElementById('portfolio-grid');
+  const portfolioLoadMoreBtn = document.getElementById('portfolio-load-more');
+  const portfolioCountBadge = document.getElementById('portfolio-count-badge');
+
+  function buildPortfolioCard(p, batchIndex) {
+    const card = document.createElement('div');
+    card.className = 'portfolio-card fade-up';
+    card.style.transitionDelay = `${batchIndex * 0.06}s`;
+    card.innerHTML = `
+      <div class="portfolio-img-wrap">
+        <img class="portfolio-img" src="${p.img}" alt="${p.alt}" loading="lazy">
+        <span class="portfolio-category">${p.category}</span>
+      </div>
+      <div class="portfolio-body">
+        <div class="portfolio-header">
+          <a class="portfolio-link" href="${p.url}" target="_blank">${p.title}</a>
+          <span class="portfolio-arrow">↗</span>
+        </div>
+        <p class="portfolio-desc">${p.desc}</p>
+        <div class="portfolio-tools">
+          ${p.tools.map(t => `<span class="portfolio-tool-tag">${t}</span>`).join('')}
+        </div>
+      </div>`;
+    return card;
+  }
+
+  // Appends only the next batch of cards — never touches cards already in the
+  // DOM, so "Load More" can't reflow, re-animate, or shift anything already visible.
+  function appendPortfolioBatch() {
+    if (!portfolioGrid) return;
+
+    if (portfolioCountBadge) {
+      portfolioCountBadge.textContent = PROJECTS.length + (PROJECTS.length === 1 ? ' project' : ' projects');
+    }
+
+    const start = portfolioVisibleCount;
+    const end = Math.min(portfolioVisibleCount + PORTFOLIO_PAGE_SIZE, PROJECTS.length);
+    const batch = PROJECTS.slice(start, end);
+
+    batch.forEach((p, i) => {
+      const card = buildPortfolioCard(p, i);
+      portfolioGrid.appendChild(card);
+      fadeObs.observe(card);
+    });
+
+    portfolioVisibleCount = end;
+
+    if (portfolioLoadMoreBtn) {
+      portfolioLoadMoreBtn.classList.toggle('hidden', portfolioVisibleCount >= PROJECTS.length);
+    }
+  }
+
+  if (portfolioLoadMoreBtn) {
+    portfolioLoadMoreBtn.addEventListener('click', appendPortfolioBatch);
+  }
+
+  appendPortfolioBatch();
+
   /* ---- Certificates: data-driven gallery ---- */
   // Add as many certificates as you have — just extend this array.
   // src: image path · title: certificate name · meta: issuer / category
