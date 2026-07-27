@@ -347,19 +347,19 @@
       url: 'https://localized-online-bayanihan.infinityfree.me/',
       category: 'Nonprofit / Community',
       desc: 'Community disaster-preparedness platform built to help local groups coordinate emergency response; led a full public-facing redesign with a Philippine-inspired visual system.',
-      tools: ['PHP', 'MySQL', 'HTML', 'CSS', 'JavaScript']
+      tools: ['PHP', 'MySQL', 'HTML5', 'CSS3', 'JavaScript']
     },
     {
-      img: 'images/bsit.webp',
-      alt: 'University of San Carlos',
+      img: 'images/bsit.wep',
+      alt: 'BSIT Department - CEBU TECH. UNIVERSITY',
       title: 'usc.edu.ph',
-      url: 'https://www.usc.edu.ph',
+      url: 'bsit',
       category: 'Education',
       desc: 'Front-end development and maintenance for a university-scale website, translating design updates into responsive, cross-browser pages for thousands of daily visitors.',
-      tools: ['HTML', 'CSS', 'JavaScript']
+      tools: ['HTML5', 'CSS3', 'JavaScript', 'WordPress']
     },
     {
-      img: 'images/output3.webp',
+      img: 'images/output3.png',
       alt: 'Dynamic Therapy',
       title: 'welovedynamictherapy.com',
       url: 'https://welovedynamictherapy.com/virtualservices',
@@ -368,7 +368,7 @@
       tools: ['HTML5', 'CSS3', 'JavaScript', 'WordPress']
     },
     {
-      img: 'images/output4.webp',
+      img: 'images/output4.png',
       alt: 'Famcor Consultants',
       title: 'famcorconsultants.com',
       url: 'https://www.famcorconsultants.com/',
@@ -377,7 +377,7 @@
       tools: ['HTML5', 'CSS3', 'JavaScript', 'PHP']
     },
     {
-      img: 'images/output5.webp',
+      img: 'images/output5.png',
       alt: 'Kabayan Filipino Market',
       title: 'kabayanfilipinomarket.com',
       url: 'https://www.kabayanfilipinomarket.com',
