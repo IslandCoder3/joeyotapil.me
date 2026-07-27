@@ -343,7 +343,7 @@
     {
       img: 'images/lob.webp',
       alt: 'Bayanihan LOB-DP',
-      title: 'localized-online-bayanihan.infinityfree.me',
+      title: 'Localized Online Bayanihan for Disaster Preparedness',
       url: 'https://localized-online-bayanihan.infinityfree.me/',
       category: 'Nonprofit / Community',
       desc: 'Community disaster-preparedness platform built to help local groups coordinate emergency response; led a full public-facing redesign with a Philippine-inspired visual system.',
@@ -352,39 +352,13 @@
     {
       img: 'images/bsit.webp',
       alt: 'BSIT Department - CEBU TECH. UNIVERSITY',
-      title: 'usc.edu.ph',
+      title: 'BSIT Department - CEBU TECH. UNIVERSITY',
       url: 'bsit',
       category: 'Education',
       desc: 'Front-end development and maintenance for a university-scale website, translating design updates into responsive, cross-browser pages for thousands of daily visitors.',
       tools: ['HTML5', 'CSS3', 'JavaScript', 'WordPress']
     },
-    {
-      img: 'images/output3.png',
-      alt: 'Dynamic Therapy',
-      title: 'welovedynamictherapy.com',
-      url: 'https://welovedynamictherapy.com/virtualservices',
-      category: 'Healthcare',
-      desc: 'Virtual-services landing page for a therapy practice, designed to convert visitors into booked consultations with a calm, trust-building layout.',
-      tools: ['HTML5', 'CSS3', 'JavaScript', 'WordPress']
-    },
-    {
-      img: 'images/output4.png',
-      alt: 'Famcor Consultants',
-      title: 'famcorconsultants.com',
-      url: 'https://www.famcorconsultants.com/',
-      category: 'Corporate / Consulting',
-      desc: 'Corporate site for a consulting firm, built to present services and credibility clearly for prospective B2B clients.',
-      tools: ['HTML5', 'CSS3', 'JavaScript', 'PHP']
-    },
-    {
-      img: 'images/output5.png',
-      alt: 'Kabayan Filipino Market',
-      title: 'kabayanfilipinomarket.com',
-      url: 'https://www.kabayanfilipinomarket.com',
-      category: 'E-Commerce / Retail',
-      desc: 'Storefront site for a Filipino grocery market, showcasing products and store info in a responsive, easy-to-browse layout.',
-      tools: ['HTML5', 'CSS3', 'JavaScript', 'WordPress']
-    }
+
     // { img: 'images/outputN.png', alt: '...', title: '...', url: '...', category: '...', desc: '...', tools: ['...'] },
   ];
 
