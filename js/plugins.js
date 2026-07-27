@@ -347,16 +347,16 @@
       url: 'https://localized-online-bayanihan.infinityfree.me/',
       category: 'Nonprofit / Community',
       desc: 'Community disaster-preparedness platform built to help local groups coordinate emergency response; led a full public-facing redesign with a Philippine-inspired visual system.',
-      tools: ['PHP', 'MySQL', 'HTML5', 'CSS3', 'JavaScript']
+      tools: ['PHP', 'MySQL', 'HTML', 'CSS', 'JavaScript']
     },
     {
       img: 'images/bsit.webp',
       alt: 'BSIT Department - CEBU TECH. UNIVERSITY',
       title: 'BSIT Department - CEBU TECH. UNIVERSITY',
-      url: 'bsit',
+      url: '#',
       category: 'Education',
       desc: 'Front-end development and maintenance for a university-scale website, translating design updates into responsive, cross-browser pages for thousands of daily visitors.',
-      tools: ['HTML5', 'CSS3', 'JavaScript', 'WordPress']
+      tools: ['HTML', 'CSS', 'JavaScript']
     },
 
     // { img: 'images/outputN.png', alt: '...', title: '...', url: '...', category: '...', desc: '...', tools: ['...'] },
