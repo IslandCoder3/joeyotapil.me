@@ -168,7 +168,7 @@ and (max-width : 1000px) {
 @media only screen
 and (max-width : 800px) {
   /*Header Area*/
-  #home { padding: 0 24px; }
+  #home { padding: 0 24px 70px; }
   .hero-inner { padding-top: 80px; }
 
   /* Tighter, quicker entrance — a 1.3s reveal reads as sluggish on a
@@ -187,7 +187,6 @@ and (max-width : 800px) {
   /*Middle Area*/
   section { padding: 70px 24px; min-height: auto; }
   .about-grid { grid-template-columns: 1fr; gap: 40px; }
-  .about-photo-wrap { max-width: 250px; }
   .about-info-grid { grid-template-columns: 1fr; }
   .portfolio-grid { grid-template-columns: repeat(2, 1fr); }
 
