@@ -24,13 +24,18 @@
   /* ---- Scroll progress bar ---- */
   const scrollProgressBar = document.getElementById('scroll-progress-bar');
   if (scrollProgressBar) {
+    let progressRaf = null;
     const updateScrollProgress = () => {
+      progressRaf = null;
       const docHeight = document.documentElement.scrollHeight - window.innerHeight;
       const pct = docHeight > 0 ? (window.scrollY / docHeight) * 100 : 0;
       scrollProgressBar.style.width = pct + '%';
     };
-    window.addEventListener('scroll', updateScrollProgress, { passive: true });
-    window.addEventListener('resize', updateScrollProgress);
+    const requestProgressUpdate = () => {
+      if (progressRaf === null) progressRaf = requestAnimationFrame(updateScrollProgress);
+    };
+    window.addEventListener('scroll', requestProgressUpdate, { passive: true });
+    window.addEventListener('resize', requestProgressUpdate);
     updateScrollProgress();
   }
 
@@ -48,7 +53,7 @@
     // cursor-linking effect it exists for anyway.
     const isSmallScreen = window.matchMedia('(max-width: 700px)').matches;
     const lowPower = isSmallScreen || !hasFinePointer;
-    const PARTICLE_COUNT = lowPower ? 28 : 80;
+    const PARTICLE_COUNT = lowPower ? 20 : 50;
     const DRAW_CONNECTIONS = !lowPower;
 
     function resize() {
