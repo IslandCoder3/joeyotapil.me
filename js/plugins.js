@@ -358,7 +358,7 @@
       img: 'images/bsit.webp',
       alt: 'BSIT Department - CEBU TECH. UNIVERSITY',
       title: 'BSIT Department - CEBU TECH. UNIVERSITY',
-      url: '#',
+      url: 'https://bsit-ctu-tuburan.onrender.com/',
       category: 'Education',
       desc: 'Front-end development and maintenance for a university-scale website, translating design updates into responsive, cross-browser pages for thousands of daily visitors.',
       tools: ['HTML', 'CSS', 'JavaScript']
