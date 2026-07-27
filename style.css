@@ -326,8 +326,6 @@ a:focus-visible, button:focus-visible, input:focus-visible {
   pointer-events: none;
 }
 #mobile-topbar #hamburger-btn { pointer-events: auto; }
-.topbar-logo { font-family: var(--ff-m); font-size: 13px; color: var(--cyan); letter-spacing: .06em; }
-.topbar-logo span { color: var(--muted); }
 
 #hamburger-btn {
   display: none; flex-direction: column; gap: 5px;
