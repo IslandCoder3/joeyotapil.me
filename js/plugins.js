@@ -350,7 +350,7 @@
       tools: ['PHP', 'MySQL', 'HTML5', 'CSS3', 'JavaScript']
     },
     {
-      img: 'images/bsit.wep',
+      img: 'images/bsit.webp',
       alt: 'BSIT Department - CEBU TECH. UNIVERSITY',
       title: 'usc.edu.ph',
       url: 'bsit',
