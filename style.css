@@ -24,7 +24,12 @@
    RESET
 ════════════════════════════════════════════════════ */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+  scrollbar-gutter: stable;
+  scrollbar-width: thin;
+  scrollbar-color: var(--cyan) var(--slate);
+}
 body {
   font-family: var(--ff-b);
   background: var(--navy);
@@ -41,9 +46,10 @@ p { line-height: 1.8; }
 strong { font-weight: 600; }
 button { font-family: inherit; }
 
-::-webkit-scrollbar { width: 4px; }
-::-webkit-scrollbar-track { background: var(--navy); }
-::-webkit-scrollbar-thumb { background: var(--cyan); border-radius: 2px; }
+::-webkit-scrollbar { width: 9px; }
+::-webkit-scrollbar-track { background: var(--slate); }
+::-webkit-scrollbar-thumb { background: var(--cyan); border-radius: 5px; border: 2px solid var(--slate); background-clip: padding-box; }
+::-webkit-scrollbar-thumb:hover { background: #33ddff; }
 
 /* keyboard focus visibility */
 a:focus-visible, button:focus-visible, input:focus-visible {
@@ -605,7 +611,13 @@ section { padding: 92px 64px; position: relative; }
 /* ════════════════════════════════════════════════════
    PORTFOLIO
 ════════════════════════════════════════════════════ */
-.portfolio-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
+.portfolio-heading-row { display: flex; align-items: center; gap: 16px; margin-bottom: 12px; flex-wrap: wrap; }
+.portfolio-count-badge {
+  font-family: var(--ff-m); font-size: 11px; color: var(--cyan);
+  background: rgba(0,212,255,.08); border: 1px solid rgba(0,212,255,.2);
+  padding: 4px 14px; border-radius: 20px;
+}
+.portfolio-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
 .portfolio-card {
   background: var(--panel); border: 1px solid var(--border);
   border-radius: 10px; overflow: hidden;
@@ -616,12 +628,31 @@ section { padding: 92px 64px; position: relative; }
   transform: translateY(-6px); border-color: rgba(0,212,255,.32);
   box-shadow: 0 18px 50px rgba(0,0,0,.35), 0 0 30px rgba(0,212,255,.07);
 }
+.portfolio-img-wrap { position: relative; }
+.portfolio-category {
+  position: absolute; top: 12px; left: 12px; z-index: 2;
+  font-family: var(--ff-m); font-size: 10px; letter-spacing: .05em; text-transform: uppercase;
+  color: var(--white); background: rgba(5,10,20,.72); backdrop-filter: blur(4px);
+  border: 1px solid rgba(255,255,255,.16); padding: 5px 12px; border-radius: 20px;
+}
 .portfolio-img { width: 100%; aspect-ratio: 16/9; object-fit: cover; filter: grayscale(25%); transition: transform .5s, filter .4s; }
 .portfolio-card:hover .portfolio-img { transform: scale(1.06); filter: grayscale(0%); }
-.portfolio-body { padding: 14px 16px; display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+.portfolio-body { padding: 16px 18px 18px; display: flex; flex-direction: column; gap: 10px; }
+.portfolio-header { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
 .portfolio-link { font-family: var(--ff-m); font-size: 11px; color: var(--cyan); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .portfolio-arrow { color: var(--muted); font-size: 14px; transition: transform .25s, color .25s; flex-shrink: 0; }
 .portfolio-card:hover .portfolio-arrow { transform: translate(3px,-3px); color: var(--cyan); }
+.portfolio-desc { color: var(--muted); font-size: 13px; line-height: 1.75; }
+.portfolio-tools { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 2px; }
+.portfolio-tool-tag {
+  font-family: var(--ff-m); font-size: 10.5px; letter-spacing: .02em;
+  padding: 4px 11px; border: 1px solid var(--border); border-radius: 20px;
+  color: var(--cyan); background: var(--cyan-dim); white-space: nowrap;
+  transition: border-color .2s, background .2s;
+}
+.portfolio-card:hover .portfolio-tool-tag { border-color: rgba(0,212,255,.3); background: rgba(0,212,255,.12); }
+.portfolio-load-more-wrap { text-align: center; margin-top: 32px; }
+.portfolio-load-more-wrap .btn-outline.hidden { display: none; }
 
 /* ════════════════════════════════════════════════════
    CERTIFICATES

@@ -14,7 +14,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.min.css">
-  <link rel="stylesheet" href="media.min.css">
+  <link rel="stylesheet" href="css/media.min.css">
 </head>
 
 <body>
@@ -200,45 +200,16 @@
   <!-- ===== PORTFOLIO ===== -->
   <section id="portfolio">
     <div class="section-label">// portfolio</div>
-    <h2 class="section-title">My <span>Work</span></h2>
+    <div class="portfolio-heading-row">
+      <h2 class="section-title" style="margin-bottom:0;">My <span>Work</span></h2>
+      <div class="portfolio-count-badge" id="portfolio-count-badge"></div>
+    </div>
     <div class="section-divider"></div>
 
-    <div class="portfolio-grid">
-      <div class="portfolio-card fade-up">
-        <img class="portfolio-img" src="images/output1.png" alt="Vegas Business Broker" loading="lazy">
-        <div class="portfolio-body">
-          <a class="portfolio-link" href="https://localized-online-bayanihan.infinityfree.me/" target="_blank">localized-online-bayanihan.infinityfree.me</a>
-          <span class="portfolio-arrow">↗</span>
-        </div>
-      </div>
-      <div class="portfolio-card fade-up" style="transition-delay:.06s">
-        <img class="portfolio-img" src="images/output2.png" alt="USC" loading="lazy">
-        <div class="portfolio-body">
-          <a class="portfolio-link" href="https://www.usc.edu.ph" target="_blank">usc.edu.ph</a>
-          <span class="portfolio-arrow">↗</span>
-        </div>
-      </div>
-      <div class="portfolio-card fade-up" style="transition-delay:.12s">
-        <img class="portfolio-img" src="images/output3.png" alt="Dynamic Therapy" loading="lazy">
-        <div class="portfolio-body">
-          <a class="portfolio-link" href="https://welovedynamictherapy.com/virtualservices" target="_blank">welovedynamictherapy.com</a>
-          <span class="portfolio-arrow">↗</span>
-        </div>
-      </div>
-      <div class="portfolio-card fade-up" style="transition-delay:.18s">
-        <img class="portfolio-img" src="images/output4.png" alt="Famcor Consultants" loading="lazy">
-        <div class="portfolio-body">
-          <a class="portfolio-link" href="https://www.famcorconsultants.com/" target="_blank">famcorconsultants.com</a>
-          <span class="portfolio-arrow">↗</span>
-        </div>
-      </div>
-      <div class="portfolio-card fade-up" style="transition-delay:.24s">
-        <img class="portfolio-img" src="images/output5.png" alt="Kabayan Filipino Market" loading="lazy">
-        <div class="portfolio-body">
-          <a class="portfolio-link" href="https://www.kabayanfilipinomarket.com" target="_blank">kabayanfilipinomarket.com</a>
-          <span class="portfolio-arrow">↗</span>
-        </div>
-      </div>
+    <div class="portfolio-grid" id="portfolio-grid"></div>
+
+    <div class="portfolio-load-more-wrap">
+      <button class="btn-outline" id="portfolio-load-more">Load More Projects ↓</button>
     </div>
   </section>
 
