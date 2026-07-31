@@ -363,6 +363,15 @@
       desc: 'Front-end development and maintenance for a university-scale website, translating design updates into responsive, cross-browser pages for thousands of daily visitors.',
       tools: ['HTML', 'CSS', 'JavaScript']
     },
+    {
+      img: 'images/tank-battle.webp',
+      alt: 'Tank Battle: Retro Edition — Vibe-Coded with Cursor AI',
+      title: 'Tank Battle: Retro Edition — Vibe-Coded with Cursor AI',
+      url: 'https://tank-battle-retro.onrender.com/',
+      category: 'GAME DEV',
+      desc: 'A rapid AI-assisted coding experiment turning a game concept into a playable retro tank battle — built with Cursor AI to explore fast ideation and playful UI over traditional dev cycles.',
+      tools: ['HTML', 'CSS', 'JavaScript', 'Cursor AI']
+    },
 
     // { img: 'images/outputN.png', alt: '...', title: '...', url: '...', category: '...', desc: '...', tools: ['...'] },
   ];
