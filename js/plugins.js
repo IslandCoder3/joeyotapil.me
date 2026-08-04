@@ -399,6 +399,24 @@
       desc: 'A rapid AI-assisted coding experiment turning a game concept into a playable retro tank battle — built with Cursor AI to explore fast ideation and playful UI over traditional dev cycles.',
       tools: ['HTML', 'CSS', 'JavaScript', 'Cursor AI']
     },
+    {
+      img: 'images/hq-phones.webp',
+      alt: 'HQ Phones — Current Inventory',
+      title: 'HQ Phones',
+      url: 'https://hq-phones.onrender.com/',
+      category: 'Business / E-commerce',
+      desc: 'Phone inventory site for a resale shop — browsable catalog with full spec sheets per device, a compare tool, and an inquiry form since pricing is confirmed by staff rather than listed.',
+      tools: ['HTML', 'CSS', 'JavaScript']
+    },
+    {
+      img: 'images/familys-bakeshop.webp',
+      alt: "Family's Bakeshop — Fresh Breads in Toledo City, Cebu",
+      title: "Family's Bakeshop",
+      url: 'https://familys-bakeshop.onrender.com/',
+      category: 'Business / E-commerce',
+      desc: 'Neighborhood panaderya site with a tappable menu that builds a running order slip, sent to the shop by text or email — plus a story section and location/contact details.',
+      tools: ['HTML', 'CSS', 'JavaScript']
+    },
 
     // { img: 'images/outputN.png', alt: '...', title: '...', url: '...', category: '...', desc: '...', tools: ['...'] },
   ];
