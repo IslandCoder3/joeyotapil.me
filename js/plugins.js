@@ -421,7 +421,7 @@
     // { img: 'images/outputN.png', alt: '...', title: '...', url: '...', category: '...', desc: '...', tools: ['...'] },
   ];
 
-  const PORTFOLIO_PAGE_SIZE = 6; // how many project cards show initially / per "Load More" click
+  const PORTFOLIO_PAGE_SIZE = window.innerWidth <= 600 ? 3 : 6; // how many project cards show initially / per "Load More" click
   let portfolioVisibleCount = 0;
 
   const portfolioGrid = document.getElementById('portfolio-grid');
@@ -502,7 +502,7 @@
     // { src: 'images/cert5.jpg', title: 'Your Next Certificate', meta: 'Issuer Name' },
   ];
 
-  const PAGE_SIZE = 8; // how many cards load at a time
+  const PAGE_SIZE = 5; // how many cards load at a time
   let visibleCount = PAGE_SIZE;
   let filteredCerts = CERTIFICATES.slice();
 
