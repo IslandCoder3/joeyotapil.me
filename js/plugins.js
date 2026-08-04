@@ -337,7 +337,7 @@
     });
   }
 
-  /* ---- Portfolio: data-driven project grid ---- */
+/* ---- Portfolio: data-driven project grid ---- */
   // Add as many projects as you have — just extend this array.
   // img: screenshot path · alt: image alt text · title: display label for the link
   // url: live site link · desc: 1-2 sentence summary of the work · tools: array of tags
@@ -362,6 +362,33 @@
       category: 'Education',
       desc: 'Front-end development and maintenance for a university-scale website, translating design updates into responsive, cross-browser pages for thousands of daily visitors.',
       tools: ['HTML', 'CSS', 'JavaScript']
+    },   
+    {
+      img: 'images/soft-sweet-cakes.webp',
+      alt: 'Soft & Sweet Cakes - Kawaii Bakery in Cebu',
+      title: 'Soft & Sweet Cakes',
+      url: 'https://soft-and-sweet-cakes.onrender.com/',
+      category: 'Business / E-commerce',
+      desc: 'Pastel kawaii-themed bakery site for a Cebu-based cake shop, built around a soft, playful visual identity with treat galleries, delivery info, and branch/contact details.',
+      tools: ['HTML', 'CSS', 'JavaScript']
+    },
+    {
+      img: 'images/tour-and-travel.webp',
+      alt: 'Tour and Travel Guide',
+      title: 'Tour and Travel Guide',
+      url: 'https://tour-and-travel-website-ugg3.onrender.com/',
+      category: 'Travel & Tourism',
+      desc: 'Adventure tour booking site with a reservation form, destination packages, filterable gallery, and customer reviews for a small-group travel outfit.',
+      tools: ['HTML', 'CSS', 'JavaScript']
+    },
+    {
+      img: 'images/ec-travel.webp',
+      alt: 'EC Travel - Adventure Tours & Boarding Passes to Somewhere New',
+      title: 'EC Travel',
+      url: 'https://ec-travel.onrender.com/',
+      category: 'Travel & Tourism',
+      desc: 'Redesign/expansion of the tour-and-travel booking concept into a full "boarding pass" themed experience — per-person pricing, trip stats, and a richer reservation flow.',
+      tools: ['HTML', 'CSS', 'JavaScript']
     },
     {
       img: 'images/tank-battle.webp',
@@ -376,7 +403,7 @@
     // { img: 'images/outputN.png', alt: '...', title: '...', url: '...', category: '...', desc: '...', tools: ['...'] },
   ];
 
-  const PORTFOLIO_PAGE_SIZE = 3; // how many project cards show initially / per "Load More" click
+  const PORTFOLIO_PAGE_SIZE = 6; // how many project cards show initially / per "Load More" click
   let portfolioVisibleCount = 0;
 
   const portfolioGrid = document.getElementById('portfolio-grid');
