@@ -346,6 +346,15 @@
   // swap in the real scope of work and actual stack for each project before publishing.
   const PROJECTS = [
     {
+      img: 'images/soft-sweet-cakes.webp',
+      alt: 'Soft & Sweet Cakes - Kawaii Bakery in Cebu',
+      title: 'Soft & Sweet Cakes',
+      url: 'https://soft-and-sweet-cakes.onrender.com/',
+      category: 'Business / E-commerce',
+      desc: 'Pastel kawaii-themed bakery site for a Cebu-based cake shop, built around a soft, playful visual identity with treat galleries, delivery info, and branch/contact details.',
+      tools: ['HTML', 'CSS', 'JavaScript']
+    },
+    {
       img: 'images/lob.webp',
       alt: 'Bayanihan LOB-DP',
       title: 'Localized Online Bayanihan for Disaster Preparedness',
@@ -355,21 +364,12 @@
       tools: ['PHP', 'MySQL', 'HTML', 'CSS', 'JavaScript']
     },
     {
-      img: 'images/bsit.webp',
-      alt: 'BSIT Department - CEBU TECH. UNIVERSITY',
-      title: 'BSIT Department - CEBU TECH. UNIVERSITY',
-      url: 'https://bsit-ctu-tuburan.onrender.com/',
-      category: 'Education',
-      desc: 'Front-end development and maintenance for a university-scale website, translating design updates into responsive, cross-browser pages for thousands of daily visitors.',
-      tools: ['HTML', 'CSS', 'JavaScript']
-    },   
-    {
-      img: 'images/soft-sweet-cakes.webp',
-      alt: 'Soft & Sweet Cakes - Kawaii Bakery in Cebu',
-      title: 'Soft & Sweet Cakes',
-      url: 'https://soft-and-sweet-cakes.onrender.com/',
-      category: 'Business / E-commerce',
-      desc: 'Pastel kawaii-themed bakery site for a Cebu-based cake shop, built around a soft, playful visual identity with treat galleries, delivery info, and branch/contact details.',
+      img: 'images/ec-travel.webp',
+      alt: 'EC Travel - Adventure Tours & Boarding Passes to Somewhere New',
+      title: 'EC Travel',
+      url: 'https://ec-travel.onrender.com/',
+      category: 'Travel & Tourism',
+      desc: 'Redesign/expansion of the tour-and-travel booking concept into a full "boarding pass" themed experience — per-person pricing, trip stats, and a richer reservation flow.',
       tools: ['HTML', 'CSS', 'JavaScript']
     },
     {
@@ -382,12 +382,12 @@
       tools: ['HTML', 'CSS', 'JavaScript']
     },
     {
-      img: 'images/ec-travel.webp',
-      alt: 'EC Travel - Adventure Tours & Boarding Passes to Somewhere New',
-      title: 'EC Travel',
-      url: 'https://ec-travel.onrender.com/',
-      category: 'Travel & Tourism',
-      desc: 'Redesign/expansion of the tour-and-travel booking concept into a full "boarding pass" themed experience — per-person pricing, trip stats, and a richer reservation flow.',
+      img: 'images/bsit.webp',
+      alt: 'BSIT Department - CEBU TECH. UNIVERSITY',
+      title: 'BSIT Department - CEBU TECH. UNIVERSITY',
+      url: 'https://bsit-ctu-tuburan.onrender.com/',
+      category: 'Education',
+      desc: 'Front-end development and maintenance for a university-scale website, translating design updates into responsive, cross-browser pages for thousands of daily visitors.',
       tools: ['HTML', 'CSS', 'JavaScript']
     },
     {
@@ -415,6 +415,24 @@
       url: 'https://familys-bakeshop.onrender.com/',
       category: 'Business / E-commerce',
       desc: 'Neighborhood panaderya site with a tappable menu that builds a running order slip, sent to the shop by text or email — plus a story section and location/contact details.',
+      tools: ['HTML', 'CSS', 'JavaScript']
+    },
+    {
+      img: 'images/cnu-balamban.webp',
+      alt: 'Cebu Normal University — Balamban Campus',
+      title: 'Cebu Normal University — Balamban Campus',
+      url: 'https://islandcoder3.github.io/cnu-balamban/',
+      category: 'Education',
+      desc: 'Course-guide microsite for a university campus — mission/vision section, campus stat counters, and a toggle-based program comparison between the Main and Balamban campuses.',
+      tools: ['HTML', 'CSS', 'JavaScript']
+    },
+    {
+      img: 'images/students-day-2016.webp',
+      alt: 'Students\u2019 Day 2016 \u00b7 Cebu Normal University',
+      title: 'Students\u2019 Day 2016',
+      url: 'https://islandcoder3.github.io/students-day-2016/',
+      category: 'Education',
+      desc: 'Rebuild of a 2016 Web Designing contest entry — a full morning/afternoon event program, a six-game Larong Pinoy showcase, and contestant credits, kept true to the original site.',
       tools: ['HTML', 'CSS', 'JavaScript']
     },
 
