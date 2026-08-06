@@ -369,7 +369,7 @@
       title: 'EC Travel',
       url: 'https://ec-travel.onrender.com/',
       category: 'Travel & Tourism',
-      desc: 'Redesign/expansion of the tour-and-travel booking concept into a full "boarding pass" themed experience — per-person pricing, trip stats, and a richer reservation flow.',
+      desc: 'A full "boarding pass" themed travel booking experience — per-person pricing, trip stats, and a rich reservation flow.',
       tools: ['HTML', 'CSS', 'JavaScript']
     },
     {
@@ -398,6 +398,15 @@
       category: 'GAME DEV',
       desc: 'A rapid AI-assisted coding experiment turning a game concept into a playable retro tank battle — built with Cursor AI to explore fast ideation and playful UI over traditional dev cycles.',
       tools: ['HTML', 'CSS', 'JavaScript', 'Cursor AI']
+    },
+    {
+      img: 'images/cebeco3-engineering.webp',
+      alt: 'CEBECO III Engineering Division — Cebu III Electric Cooperative',
+      title: 'CEBECO III — Engineering Division',
+      url: 'https://cebeco3-engineering.vercel.app/',
+      category: 'Business / Utilities',
+      desc: 'A static, engineering-themed site for CEBECO III\u2019s Engineering Division, built around an interactive one-line electrical diagram of the co-op\u2019s real service area across Toledo City and four western Cebu municipalities.',
+      tools: ['HTML', 'CSS', 'JavaScript']
     },
     {
       img: 'images/hq-phones.webp',
@@ -450,7 +459,7 @@
       title: 'Students\u2019 Day 2016',
       url: 'https://islandcoder3.github.io/students-day-2016/',
       category: 'Education',
-      desc: 'Rebuild of a 2016 Web Designing contest entry — a full morning/afternoon event program, a six-game Larong Pinoy showcase, and contestant credits, kept true to the original site.',
+      desc: 'A 2016 Web Designing contest entry for Cebu Normal University \u2014 a full morning/afternoon event program, a six-game Larong Pinoy showcase, and contestant credits.',
       tools: ['HTML', 'CSS', 'JavaScript']
     },
 
