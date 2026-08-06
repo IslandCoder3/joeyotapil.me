@@ -441,10 +441,45 @@
 
   const PORTFOLIO_PAGE_SIZE = window.innerWidth <= 600 ? 3 : 6; // how many project cards show initially / per "Load More" click
   let portfolioVisibleCount = 0;
+  let portfolioActiveCategory = 'All';
 
   const portfolioGrid = document.getElementById('portfolio-grid');
+  const portfolioFilters = document.getElementById('portfolio-filters');
   const portfolioLoadMoreBtn = document.getElementById('portfolio-load-more');
   const portfolioCountBadge = document.getElementById('portfolio-count-badge');
+
+  // Categories are pulled straight from PROJECTS, in first-seen order — add a
+  // new category to a project above and its filter pill appears automatically.
+  const PORTFOLIO_CATEGORIES = ['All', ...new Set(PROJECTS.map(p => p.category))];
+
+  function getFilteredProjects() {
+    return portfolioActiveCategory === 'All'
+      ? PROJECTS
+      : PROJECTS.filter(p => p.category === portfolioActiveCategory);
+  }
+
+  function renderPortfolioFilters() {
+    if (!portfolioFilters) return;
+    portfolioFilters.innerHTML = PORTFOLIO_CATEGORIES.map(cat => `
+      <button type="button" class="filter-pill${cat === portfolioActiveCategory ? ' active' : ''}" data-category="${cat}">${cat}</button>
+    `).join('');
+
+    portfolioFilters.querySelectorAll('.filter-pill').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const category = btn.dataset.category;
+        if (category === portfolioActiveCategory) return;
+        portfolioActiveCategory = category;
+
+        portfolioFilters.querySelectorAll('.filter-pill').forEach(b =>
+          b.classList.toggle('active', b.dataset.category === portfolioActiveCategory)
+        );
+
+        portfolioGrid.innerHTML = '';
+        portfolioVisibleCount = 0;
+        appendPortfolioBatch();
+      });
+    });
+  }
 
   function buildPortfolioCard(p, batchIndex) {
     const card = document.createElement('div');
@@ -473,13 +508,15 @@
   function appendPortfolioBatch() {
     if (!portfolioGrid) return;
 
+    const filtered = getFilteredProjects();
+
     if (portfolioCountBadge) {
-      portfolioCountBadge.textContent = PROJECTS.length + (PROJECTS.length === 1 ? ' project' : ' projects');
+      portfolioCountBadge.textContent = filtered.length + (filtered.length === 1 ? ' project' : ' projects');
     }
 
     const start = portfolioVisibleCount;
-    const end = Math.min(portfolioVisibleCount + PORTFOLIO_PAGE_SIZE, PROJECTS.length);
-    const batch = PROJECTS.slice(start, end);
+    const end = Math.min(portfolioVisibleCount + PORTFOLIO_PAGE_SIZE, filtered.length);
+    const batch = filtered.slice(start, end);
 
     batch.forEach((p, i) => {
       const card = buildPortfolioCard(p, i);
@@ -490,13 +527,15 @@
     portfolioVisibleCount = end;
 
     if (portfolioLoadMoreBtn) {
-      portfolioLoadMoreBtn.classList.toggle('hidden', portfolioVisibleCount >= PROJECTS.length);
+      portfolioLoadMoreBtn.classList.toggle('hidden', portfolioVisibleCount >= filtered.length);
     }
   }
 
   if (portfolioLoadMoreBtn) {
     portfolioLoadMoreBtn.addEventListener('click', appendPortfolioBatch);
   }
+
+  renderPortfolioFilters();
 
   appendPortfolioBatch();
 

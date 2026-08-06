@@ -42,7 +42,7 @@
 <aside id="sidebar">
   <div class="profile-img-wrap">
     <div class="profile-ring"></div>
-    <img src="images/profile.webp" alt="Joey Otapil">
+    <img src="images/profile.webp" alt="Joey Otapil" width="240" height="360" decoding="async">
   </div>
   <div class="sidebar-name">Joey Otapil</div>
   <div class="sidebar-role">Web Developer</div>
@@ -130,7 +130,7 @@
 
     <div class="about-grid fade-up">
       <div class="about-photo-wrap">
-        <img src="images/joey.webp" alt="Joey Otapil" loading="lazy">
+        <img src="images/joey.webp" alt="Joey Otapil" loading="lazy" decoding="async" width="900" height="1199">
       </div>
       <div class="about-text">
         <p>I'm a Front-End Web Developer with a passion for building clean, responsive, and user-friendly websites. I enjoy transforming designs into functional web experiences while ensuring quality, performance, and attention to detail throughout the development process.</p>
@@ -218,6 +218,8 @@
       <div class="portfolio-count-badge" id="portfolio-count-badge"></div>
     </div>
     <div class="section-divider"></div>
+
+    <div class="portfolio-filters" id="portfolio-filters"></div>
 
     <div class="portfolio-grid" id="portfolio-grid"></div>
 
@@ -370,7 +372,7 @@
 <!-- Back to top -->
 <div id="back-top">↑</div>
 
-  <script src="js/plugins.js"></script>
+  <script src="js/plugins.min.js" defer></script>
 
 </body>
 </html>

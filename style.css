@@ -544,7 +544,7 @@ section { padding: 92px 64px; position: relative; }
   background: linear-gradient(135deg, var(--violet), var(--pink));
   border-radius: 4px; opacity: .22; z-index: 0;
 }
-.about-photo-wrap img { position: relative; z-index: 1; border-radius: 4px; width: 100%; filter: grayscale(8%); }
+.about-photo-wrap img { position: relative; z-index: 1; border-radius: 4px; width: 100%; height: auto; filter: grayscale(8%); }
 
 .about-text p { color: var(--muted); font-size: 15px; margin-bottom: 18px; }
 
@@ -608,6 +608,18 @@ section { padding: 92px 64px; position: relative; }
   font-family: var(--ff-m); font-size: 11px; color: var(--cyan);
   background: rgba(0,212,255,.08); border: 1px solid rgba(0,212,255,.2);
   padding: 4px 14px; border-radius: 20px;
+}
+.portfolio-filters { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 26px; }
+.filter-pill {
+  font-family: var(--ff-m); font-size: 12px; letter-spacing: .02em;
+  color: var(--muted); background: none; cursor: pointer;
+  border: 1px solid var(--border); border-radius: 20px;
+  padding: 9px 18px; transition: border-color .2s, background .2s, color .2s, transform .2s;
+}
+.filter-pill:hover { color: var(--white); border-color: rgba(0,212,255,.36); background: rgba(0,212,255,.08); transform: translateY(-2px); }
+.filter-pill.active {
+  color: var(--navy); background: var(--cyan); border-color: var(--cyan);
+  font-weight: 600; box-shadow: 0 0 18px rgba(0,212,255,.28);
 }
 .portfolio-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
 .portfolio-card {
