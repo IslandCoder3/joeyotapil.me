@@ -427,6 +427,15 @@
       tools: ['HTML', 'CSS', 'JavaScript']
     },
     {
+      img: 'images/safe-haven-resort.webp',
+      alt: 'Safe Haven Resort — Baliwagan, Balamban, Cebu',
+      title: 'Safe Haven Resort',
+      url: 'https://safe-haven-resort.onrender.com/',
+      category: 'Travel & Tourism',
+      desc: 'Valley resort site for a Balamban, Cebu getaway spot with four pools, hiking/caving/camping trails, and event spaces for up to 300 guests — built around a scroll-driven "descent into the valley" narrative.',
+      tools: ['HTML', 'CSS', 'JavaScript']
+    },
+    {
       img: 'images/cnu-balamban.webp',
       alt: 'Cebu Normal University — Balamban Campus',
       title: 'Cebu Normal University — Balamban Campus',
