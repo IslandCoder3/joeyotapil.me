@@ -418,6 +418,15 @@
       tools: ['HTML', 'CSS', 'JavaScript']
     },
     {
+      img: 'images/ctu-tuburan.webp',
+      alt: 'Cebu Technological University — Tuburan Campus',
+      title: 'Cebu Technological University — Tuburan Campus',
+      url: 'https://ctutc-tuburan.onrender.com/',
+      category: 'Education',
+      desc: 'Full campus website for CTU Tuburan — campus history, VMGO, a five-college academic program directory, a photo gallery, and the university hymn, plus contact and map details.',
+      tools: ['HTML', 'CSS', 'JavaScript']
+    },
+    {
       img: 'images/cnu-balamban.webp',
       alt: 'Cebu Normal University — Balamban Campus',
       title: 'Cebu Normal University — Balamban Campus',
