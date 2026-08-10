@@ -403,7 +403,7 @@
       img: 'images/cebeco3-engineering.webp',
       alt: 'CEBECO III Engineering Division — Cebu III Electric Cooperative',
       title: 'CEBECO III — Engineering Division',
-      url: 'https://cebeco3-engineering.vercel.app/',
+      url: 'https://cebeco3-engineering.onrender.com/',
       category: 'Business / Utilities',
       desc: 'A static, engineering-themed site for CEBECO III\u2019s Engineering Division, built around an interactive one-line electrical diagram of the co-op\u2019s real service area across Toledo City and four western Cebu municipalities.',
       tools: ['HTML', 'CSS', 'JavaScript']
