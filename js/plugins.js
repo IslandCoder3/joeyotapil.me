@@ -462,6 +462,15 @@
       desc: 'A 2016 Web Designing contest entry for Cebu Normal University \u2014 a full morning/afternoon event program, a six-game Larong Pinoy showcase, and contestant credits.',
       tools: ['HTML', 'CSS', 'JavaScript']
     },
+    {
+      img: 'images/tailwind-workshop.webp',
+      alt: 'Utility Bench — Tailwind CSS Learning Tool',
+      title: 'Utility Bench',
+      url: 'https://islandcoder3.github.io/tailwind-workshop/',
+      category: 'Education / Developer Tools',
+      desc: 'Interactive Tailwind CSS learning tool — 43 hands-on stations across a tiered curriculum, with a live code editor, real-time preview, and a class-by-class decoder that explains every utility as you type.',
+      tools: ['HTML', 'CSS', 'JavaScript', 'Tailwind CSS']
+    },
 
     // { img: 'images/outputN.png', alt: '...', title: '...', url: '...', category: '...', desc: '...', tools: ['...'] },
   ];
