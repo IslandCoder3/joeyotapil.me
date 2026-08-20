@@ -579,6 +579,7 @@
   // Add as many certificates as you have — just extend this array.
   // src: image path · title: certificate name · meta: issuer / category
   const CERTIFICATES = [
+    { src: 'images/cert13.webp', title: 'Website Development Team - 2nd Top Performer', meta: 'Proweaver Inc.' },
     { src: 'images/cert12.webp', title: 'Certificate of Completion', meta: 'Proweaver Inc.' },
     { src: 'images/cert11.webp', title: 'Certificate of Appreciation', meta: 'Website Development Team - Top Performer' },
     { src: 'images/cert10.webp', title: 'Certificate of Appreciation', meta: 'Website Development Team - 2nd Top Performer' },
