@@ -13,13 +13,17 @@
     preloader.classList.add('loaded');
     preloader.addEventListener('transitionend', () => preloader.remove(), { once: true });
   }
-  if (document.readyState === 'complete') {
-    hidePreloader();
+  // Hide as soon as the DOM is parsed rather than waiting for every image
+  // and web font to finish downloading — the page is already interactive
+  // and visually complete at that point, so waiting on 'load' just adds
+  // dead time in front of a page that's ready to show.
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', hidePreloader);
   } else {
-    window.addEventListener('load', hidePreloader);
+    hidePreloader();
   }
-  // Safety net in case an asset (e.g. a missing image path) never fires 'load'.
-  setTimeout(hidePreloader, 3500);
+  // Safety net in case something above never fires.
+  setTimeout(hidePreloader, 1200);
 
   /* ---- Scroll progress bar ---- */
   const scrollProgressBar = document.getElementById('scroll-progress-bar');
@@ -535,6 +539,10 @@
         <div class="portfolio-tools">
           ${p.tools.map(t => `<span class="portfolio-tool-tag">${t}</span>`).join('')}
         </div>
+        <a class="portfolio-live-btn" href="${p.url}" target="_blank" rel="noopener" aria-label="Visit ${p.title} live">
+          <span>Live view</span>
+          <svg viewBox="0 0 13 10" width="12" height="10" aria-hidden="true"><path d="M1,5 L11,5" stroke="currentColor" stroke-width="1.4" fill="none"/><polyline points="8 1 12 5 8 9" stroke="currentColor" stroke-width="1.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
       </div>`;
     return card;
   }
