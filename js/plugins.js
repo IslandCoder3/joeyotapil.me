@@ -225,6 +225,30 @@
     });
   }
 
+  /* ---- Custom cursor: small dot + trailing ring (desktop mouse only) ---- */
+  const cursorDot = document.getElementById('cursor-dot');
+  const cursorRing = document.getElementById('cursor-ring');
+  if (cursorDot && cursorRing && hasFinePointer && !prefersReducedMotion) {
+    document.addEventListener('mousemove', (e) => {
+      cursorDot.style.left = e.clientX + 'px';
+      cursorDot.style.top = e.clientY + 'px';
+      cursorRing.style.left = e.clientX + 'px';
+      cursorRing.style.top = e.clientY + 'px';
+    });
+    // Delegated so it also covers portfolio/certificate cards, which are
+    // rendered after this script runs and keep growing via "Load More".
+    const CURSOR_HOVER_TARGETS = 'a, button, label, .filter-pill, .portfolio-card, .cert-card';
+    document.addEventListener('mouseover', (e) => {
+      if (e.target.closest(CURSOR_HOVER_TARGETS)) cursorRing.classList.add('hover');
+    });
+    document.addEventListener('mouseout', (e) => {
+      if (e.target.closest(CURSOR_HOVER_TARGETS)) cursorRing.classList.remove('hover');
+    });
+  } else if (cursorDot && cursorRing) {
+    cursorDot.remove();
+    cursorRing.remove();
+  }
+
   /* ---- Hamburger ---- */
   const hamburger = document.getElementById('hamburger-btn');
   const sidebar = document.getElementById('sidebar');
