@@ -21,9 +21,39 @@
 }
 
 /* ════════════════════════════════════════════════════
+   LIGHT THEME
+   Overrides the same tokens everything else already
+   reads through var(...) — surfaces/text/border only.
+   Brand accents (violet, pink, and the glow/shadow
+   rgba(0,212,255,...) instances baked in around the
+   site) intentionally stay put so the two themes still
+   feel like the same site.
+════════════════════════════════════════════════════ */
+:root[data-theme="light"] {
+  --navy:      #f6f8fb;
+  --slate:     #eef1f6;
+  --panel:     #ffffff;
+  --panel2:    #eef3f9;
+  --cyan:      #0089ab;
+  --cyan-dim:  rgba(0,137,171,.08);
+  --white:     #101826;
+  --muted:     #5b6b82;
+  --border:    rgba(10,30,55,.12);
+}
+
+/* ════════════════════════════════════════════════════
    RESET
 ════════════════════════════════════════════════════ */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+/* Cross-fade colors on theme switch. This sits early in the cascade on
+   purpose: any element below with its own transition (buttons, cards,
+   hover effects) overrides this for itself via normal specificity/order,
+   so existing interaction animations are untouched — this only fills in
+   a fade for the elements that don't already declare one. */
+*, *::before, *::after { transition: background-color .3s var(--ease), border-color .3s var(--ease), color .3s var(--ease); }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition: none !important; }
+}
 html { scroll-behavior: smooth; }
 body {
   font-family: var(--ff-b);
@@ -290,6 +320,32 @@ a:focus-visible, button:focus-visible, input:focus-visible {
   0%,100% { box-shadow: 0 0 8px rgba(34,197,94,.55); }
   50%      { box-shadow: 0 0 15px rgba(34,197,94,.9); }
 }
+
+/* ── theme toggle (fixed bottom of sidebar) ── */
+.theme-toggle {
+  position: relative; z-index: 1;
+  display: flex; align-items: center; justify-content: center; gap: 9px;
+  margin: 16px auto 0;
+  background: none; border: none; padding: 4px;
+  cursor: pointer;
+}
+.theme-icon { width: 14px; height: 14px; flex-shrink: 0; color: var(--muted); transition: color .25s var(--ease); }
+.theme-toggle[aria-pressed="false"] .theme-icon-sun { color: var(--cyan); }
+.theme-toggle[aria-pressed="true"] .theme-icon-moon { color: var(--cyan); }
+.theme-toggle-track {
+  width: 38px; height: 20px; border-radius: 999px;
+  background: var(--panel2); border: 1px solid var(--border);
+  position: relative;
+  transition: background .25s var(--ease), border-color .25s var(--ease);
+}
+.theme-toggle-thumb {
+  position: absolute; top: 2px; left: 2px;
+  width: 14px; height: 14px; border-radius: 50%;
+  background-image: linear-gradient(135deg, var(--cyan), var(--violet));
+  transition: transform .3s var(--ease);
+}
+.theme-toggle[aria-pressed="true"] .theme-toggle-thumb { transform: translateX(18px); }
+.theme-toggle:hover .theme-toggle-track { border-color: rgba(0,212,255,.4); }
 
 /* ── nav (class = side-nav, required by plugins.js) ── */
 .side-nav { width: 100%; position: relative; z-index: 1; flex: 1; margin-bottom: auto; }
@@ -680,21 +736,26 @@ section { padding: 92px 64px; position: relative; }
 .portfolio-arrow { color: var(--muted); font-size: 14px; transition: transform .25s, color .25s; flex-shrink: 0; }
 .portfolio-card:hover .portfolio-arrow { transform: translate(3px,-3px); color: var(--cyan); }
 .portfolio-live-btn {
-  display: inline-flex; align-items: center; gap: 7px;
+  display: inline-flex; align-items: center; gap: 8px;
   align-self: flex-start;
   margin-top: auto;
-  padding: 10px 18px;
-  border: 1px solid var(--cyan);
+  padding: 10px 20px;
+  border: none;
   border-radius: 999px;
-  background: var(--cyan);
+  background-image: linear-gradient(135deg, var(--cyan), var(--violet));
   color: var(--navy);
   font-family: var(--ff-d); font-weight: 700; font-size: 12px; letter-spacing: .04em;
   text-decoration: none;
-  transition: box-shadow .25s var(--ease), background .25s var(--ease), color .25s var(--ease), transform .25s var(--ease);
+  box-shadow: 0 4px 16px rgba(0,212,255,.2);
+  transition: transform .25s var(--ease), box-shadow .25s var(--ease);
 }
-.portfolio-live-btn:hover { background: transparent; color: var(--cyan); box-shadow: 0 0 22px rgba(0,212,255,.4); transform: translateY(-2px); }
-.portfolio-live-btn:active { transform: translateY(0) scale(.97); }
-.portfolio-live-btn svg { flex-shrink: 0; }
+.portfolio-live-btn svg { flex-shrink: 0; transition: transform .25s var(--ease); }
+.portfolio-live-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(0,212,255,.35);
+}
+.portfolio-live-btn:hover svg { transform: translateX(3px); }
+.portfolio-live-btn:active { transform: translateY(-1px) scale(.96); }
 .portfolio-desc { color: var(--muted); font-size: 13px; line-height: 1.75; }
 .portfolio-tools { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 2px; }
 .portfolio-tool-tag {

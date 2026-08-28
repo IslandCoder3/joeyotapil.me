@@ -6,6 +6,34 @@
   const hasFinePointer = window.matchMedia && window.matchMedia('(hover: hover) and (pointer: fine)').matches;
   const homeSection = document.getElementById('home');
 
+  /* ---- Theme toggle (dark is default; light is opt-in and remembered) ---- */
+  (function initThemeToggle() {
+    const toggle = document.getElementById('theme-toggle');
+    if (!toggle) return;
+    const metaThemeColor = document.querySelector('meta[name="theme-color"]');
+
+    function applyState(isLight) {
+      toggle.setAttribute('aria-pressed', isLight ? 'true' : 'false');
+      toggle.setAttribute('aria-label', isLight ? 'Switch to dark mode' : 'Switch to light mode');
+      if (metaThemeColor) metaThemeColor.setAttribute('content', isLight ? '#f6f8fb' : '#050a14');
+    }
+
+    // The inline head script already set data-theme before paint if needed —
+    // this just syncs the button/meta to whatever ended up applied.
+    applyState(document.documentElement.getAttribute('data-theme') === 'light');
+
+    toggle.addEventListener('click', () => {
+      const isLight = document.documentElement.getAttribute('data-theme') === 'light';
+      if (isLight) {
+        document.documentElement.removeAttribute('data-theme');
+      } else {
+        document.documentElement.setAttribute('data-theme', 'light');
+      }
+      applyState(!isLight);
+      try { localStorage.setItem('theme', isLight ? 'dark' : 'light'); } catch (e) {}
+    });
+  })();
+
   /* ---- Preloader ---- */
   function hidePreloader() {
     const preloader = document.getElementById('preloader');
