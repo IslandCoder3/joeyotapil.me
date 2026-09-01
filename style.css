@@ -30,16 +30,16 @@
    feel like the same site.
 ════════════════════════════════════════════════════ */
 :root[data-theme="light"] {
-  --navy:      #f6f8fb;
-  --slate:     #eef1f6;
-  --panel:     #ffffff;
-  --panel2:    #eef3f9;
-  --cyan:      #0089ab;
-  --cyan-dim:  rgba(0,137,171,.08);
-  --white:     #26344a;
-  --muted:     #64758c;
-  --border:    rgba(15,35,60,.08);
-  --soft-shadow: 0 2px 10px rgba(15,35,60,.04), 0 10px 30px rgba(15,35,60,.05);
+  --navy:      #e8edf2;
+  --slate:     #dee5ec;
+  --panel:     #f0f4f8;
+  --panel2:    #e3e9ef;
+  --cyan:      #13859e;
+  --cyan-dim:  rgba(19,133,158,.09);
+  --white:     #34455c;
+  --muted:     #69798e;
+  --border:    rgba(20,45,70,.09);
+  --soft-shadow: 0 2px 10px rgba(20,45,70,.05), 0 10px 26px rgba(20,45,70,.07);
 }
 :root[data-theme="light"] .portfolio-card,
 :root[data-theme="light"] .cert-card,
@@ -578,7 +578,7 @@ section { padding: 92px 64px; position: relative; }
   z-index: -1;
 }
 :root[data-theme="light"] .hero-name::after {
-  -webkit-text-stroke-color: rgba(10,30,55,.13);
+  -webkit-text-stroke-color: rgba(20,45,70,.12);
 }
 .hero-typewriter {
   font-family: var(--ff-m); font-size: clamp(14px, 1.9vw, 19px);

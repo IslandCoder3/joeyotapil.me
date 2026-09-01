@@ -15,7 +15,7 @@
     function applyState(isLight) {
       toggle.setAttribute('aria-pressed', isLight ? 'true' : 'false');
       toggle.setAttribute('aria-label', isLight ? 'Switch to dark mode' : 'Switch to light mode');
-      if (metaThemeColor) metaThemeColor.setAttribute('content', isLight ? '#f6f8fb' : '#050a14');
+      if (metaThemeColor) metaThemeColor.setAttribute('content', isLight ? '#e8edf2' : '#050a14');
     }
 
     // The inline head script already set data-theme before paint if needed —
