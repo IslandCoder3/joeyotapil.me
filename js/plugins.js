@@ -210,7 +210,7 @@
     'Web Developer',
     'Front-End Developer',
     'WordPress Developer',
-    'Website Developer'
+    'AI-Assisted Developer'
   ];
   const typedEl = document.querySelector('.typed-text');
   let roleIdx = 0, charIdx = 0, deleting = false;
@@ -417,6 +417,15 @@
       url: 'https://localized-online-bayanihan.infinityfree.me/',
       category: 'Nonprofit / Community',
       desc: 'Community disaster-preparedness platform built to help local groups coordinate emergency response; led a full public-facing redesign with a Philippine-inspired visual system.',
+      tools: ['PHP', 'MySQL', 'HTML', 'CSS', 'JavaScript']
+    },
+    {
+      img: 'images/tuburan-graduate-tracer.webp',
+      alt: 'Tuburan Graduate Tracer - Alumni Tracking & Community Platform',
+      title: 'Tuburan Graduate Tracer',
+      url: 'https://tuburan-graduate-tracer.ifree.page/',
+      category: 'Education / Alumni Community',
+      desc: 'Alumni tracking and community platform for graduates — career/job postings, event RSVPs, a community forum, a photo gallery, and an admin dashboard with live employment outcome reporting.',
       tools: ['PHP', 'MySQL', 'HTML', 'CSS', 'JavaScript']
     },
     {
