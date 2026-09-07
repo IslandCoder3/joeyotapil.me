@@ -402,6 +402,15 @@
   // swap in the real scope of work and actual stack for each project before publishing.
   const PROJECTS = [
     {
+      img: 'images/infinite-skincare.webp',
+      alt: 'INFINITE Skincare — marketing site for a Korean-inspired skincare brand',
+      title: 'INFINITE Skincare',
+      url: 'https://infinite-skincare.onrender.com/',
+      category: 'Business / E-commerce',
+      desc: 'Marketing site for a Korean-inspired skincare brand spanning four product lines — White, Vida, O\u2019Lamour and Wellness — built around a real-customer testimonials wall (photo and video) instead of stock photography.',
+      tools: ['HTML', 'CSS', 'JavaScript']
+    },
+    {
       img: 'images/soft-sweet-cakes.webp',
       alt: 'Soft & Sweet Cakes - Kawaii Bakery in Cebu',
       title: 'Soft & Sweet Cakes',

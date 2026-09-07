@@ -33,6 +33,9 @@ I went with a dark navy palette with cyan/violet accents, a monospace-and-displa
 | [Cebu Technological University — Tuburan Campus](https://ctutc-tuburan.onrender.com/) | Education | Full campus website — history, VMGO, a five-college academic program directory, a photo gallery, and the university hymn. | HTML, CSS, JavaScript |
 | [Cebu Normal University — Balamban Campus](https://islandcoder3.github.io/cnu-balamban/) | Education | Course-guide microsite with a mission/vision section, campus stat counters, and a Main-vs-Balamban program comparison. | HTML, CSS, JavaScript |
 | [Students' Day 2016](https://islandcoder3.github.io/students-day-2016/) | Education | A 2016 Web Designing contest entry for Cebu Normal University — a full morning/afternoon event program, a six-game Larong Pinoy showcase, and contestant credits. | HTML, CSS, JavaScript |
+| [Utility Bench](https://islandcoder3.github.io/tailwind-workshop/) | Education / Developer Tools | Interactive Tailwind CSS learning tool — 43 hands-on stations across a tiered curriculum, with a live code editor, real-time preview, and a class-by-class decoder that explains every utility as you type. | HTML, CSS, JavaScript, Tailwind CSS |
+| [Tuburan Graduate Tracer](https://tuburan-graduate-tracer.ifree.page/) | Education / Alumni Community | Alumni tracking and community platform for graduates — career/job postings, event RSVPs, a community forum, a photo gallery, and an admin dashboard with live employment outcome reporting. | PHP, MySQL, HTML, CSS, JavaScript |
+| [INFINITE Skincare](https://infinite-skincare.onrender.com/) | Business / E-commerce | Marketing site for a Korean-inspired skincare brand spanning four product lines — White, Vida, O'Lamour and Wellness — built around a real-customer testimonials wall (photo and video) instead of stock photography. | HTML, CSS, JavaScript |
 
 ## Tech Stack
 
