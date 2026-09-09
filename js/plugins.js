@@ -8,29 +8,33 @@
 
   /* ---- Theme toggle (dark is default; light is opt-in and remembered) ---- */
   (function initThemeToggle() {
-    const toggle = document.getElementById('theme-toggle');
-    if (!toggle) return;
+    const toggles = Array.from(document.querySelectorAll('.js-theme-toggle'));
+    if (!toggles.length) return;
     const metaThemeColor = document.querySelector('meta[name="theme-color"]');
 
     function applyState(isLight) {
-      toggle.setAttribute('aria-pressed', isLight ? 'true' : 'false');
-      toggle.setAttribute('aria-label', isLight ? 'Switch to dark mode' : 'Switch to light mode');
+      toggles.forEach((toggle) => {
+        toggle.setAttribute('aria-pressed', isLight ? 'true' : 'false');
+        toggle.setAttribute('aria-label', isLight ? 'Switch to dark mode' : 'Switch to light mode');
+      });
       if (metaThemeColor) metaThemeColor.setAttribute('content', isLight ? '#e8edf2' : '#050a14');
     }
 
     // The inline head script already set data-theme before paint if needed —
-    // this just syncs the button/meta to whatever ended up applied.
+    // this just syncs the buttons/meta to whatever ended up applied.
     applyState(document.documentElement.getAttribute('data-theme') === 'light');
 
-    toggle.addEventListener('click', () => {
-      const isLight = document.documentElement.getAttribute('data-theme') === 'light';
-      if (isLight) {
-        document.documentElement.removeAttribute('data-theme');
-      } else {
-        document.documentElement.setAttribute('data-theme', 'light');
-      }
-      applyState(!isLight);
-      try { localStorage.setItem('theme', isLight ? 'dark' : 'light'); } catch (e) {}
+    toggles.forEach((toggle) => {
+      toggle.addEventListener('click', () => {
+        const isLight = document.documentElement.getAttribute('data-theme') === 'light';
+        if (isLight) {
+          document.documentElement.removeAttribute('data-theme');
+        } else {
+          document.documentElement.setAttribute('data-theme', 'light');
+        }
+        applyState(!isLight);
+        try { localStorage.setItem('theme', isLight ? 'dark' : 'light'); } catch (e) {}
+      });
     });
   })();
 
@@ -657,7 +661,8 @@
   // Add as many certificates as you have — just extend this array.
   // src: image path · title: certificate name · meta: issuer / category
   const CERTIFICATES = [
-    { src: 'images/cert13.webp', title: 'Website Development Team - 2nd Top Performer', meta: 'Proweaver Inc.' },
+    { src: 'images/cert14.webp', title: 'Certificate of Completion', meta: 'Proweaver Inc.' },
+    { src: 'images/cert13.webp', title: 'Certificate of Appreciation', meta: 'Website Development Team - 2nd Top Performer' },
     { src: 'images/cert12.webp', title: 'Certificate of Completion', meta: 'Proweaver Inc.' },
     { src: 'images/cert11.webp', title: 'Certificate of Appreciation', meta: 'Website Development Team - Top Performer' },
     { src: 'images/cert10.webp', title: 'Certificate of Appreciation', meta: 'Website Development Team - 2nd Top Performer' },

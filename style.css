@@ -34,10 +34,10 @@
   --slate:     #dee5ec;
   --panel:     #f0f4f8;
   --panel2:    #e3e9ef;
-  --cyan:      #13859e;
-  --cyan-dim:  rgba(19,133,158,.09);
+  --cyan:      #0e6f85;
+  --cyan-dim:  rgba(14,111,133,.1);
   --white:     #34455c;
-  --muted:     #69798e;
+  --muted:     #526277;
   --border:    rgba(20,45,70,.09);
   --soft-shadow: 0 2px 10px rgba(20,45,70,.05), 0 10px 26px rgba(20,45,70,.07);
 }
@@ -388,8 +388,8 @@ a:focus-visible, button:focus-visible, input:focus-visible {
 .side-nav ul li a:hover { color: var(--white); background: rgba(0,212,255,.05); opacity: 1; }
 .side-nav ul li.active a {
   color: var(--cyan);
-  background: rgba(0,212,255,.08);
-  border-color: rgba(0,212,255,.3);
+  background: var(--cyan-dim);
+  border-color: var(--border);
 }
 
 .nav-icon {
@@ -405,8 +405,8 @@ a:focus-visible, button:focus-visible, input:focus-visible {
 .side-nav ul li:hover .nav-icon { color: var(--cyan); }
 .side-nav ul li.active .nav-icon {
   color: var(--cyan);
-  background: rgba(0,212,255,.16);
-  border-color: rgba(0,212,255,.4);
+  background: var(--cyan-dim);
+  border-color: var(--border);
 }
 
 /* active dot on the right side of the row */
@@ -427,10 +427,35 @@ a:focus-visible, button:focus-visible, input:focus-visible {
 ════════════════════════════════════════════════════ */
 #mobile-topbar {
   display: none; position: fixed; top: 0; left: 0; right: 0; height: 58px; z-index: 900;
-  align-items: center; justify-content: flex-end; padding: 0 18px;
+  align-items: center; justify-content: flex-end; padding: 0 18px; gap: 12px;
   pointer-events: none;
 }
 #mobile-topbar #hamburger-btn { pointer-events: auto; }
+
+/* Compact icon-only theme toggle. On mobile it floats on its own,
+   bottom-left, rather than crowding the hamburger button — same
+   footprint/chrome as the back-to-top button for consistency. */
+.theme-toggle-compact {
+  display: flex; align-items: center; justify-content: center;
+  width: 42px; height: 42px; flex-shrink: 0;
+  background: var(--panel); border: 1px solid var(--border); border-radius: 10px;
+  cursor: pointer;
+  transition: background .2s, border-color .2s;
+}
+.theme-toggle-compact:hover { background: var(--panel2); border-color: rgba(0,212,255,.4); }
+.theme-toggle-compact .theme-icon { width: 18px; height: 18px; color: var(--cyan); }
+.theme-toggle-compact .theme-icon-moon { display: none; }
+.theme-toggle-compact[aria-pressed="true"] .theme-icon-sun { display: none; }
+.theme-toggle-compact[aria-pressed="true"] .theme-icon-moon { display: block; }
+.theme-toggle-float {
+  display: none;
+  position: fixed; top: 66px; right: 18px; z-index: 900;
+  border-color: var(--cyan);
+  box-shadow: 0 0 16px rgba(0,212,255,.3);
+}
+@media (max-width: 1024px) {
+  .theme-toggle-float { display: flex; }
+}
 
 #hamburger-btn {
   display: none; flex-direction: column; gap: 5px;
@@ -684,7 +709,7 @@ section { padding: 92px 64px; position: relative; }
 .exp-badge {
   display: inline-flex; align-items: center; gap: 6px;
   font-family: var(--ff-m); font-size: 11px; color: var(--cyan);
-  background: rgba(0,212,255,.08); border: 1px solid rgba(0,212,255,.18);
+  background: var(--cyan-dim); border: 1px solid var(--border);
   padding: 4px 14px; border-radius: 20px; white-space: nowrap; flex-shrink: 0;
 }
 .exp-desc { color: var(--muted); font-size: 14.5px; line-height: 1.8; margin-bottom: 24px; }
@@ -714,7 +739,7 @@ section { padding: 92px 64px; position: relative; }
 .portfolio-heading-row { display: flex; align-items: center; gap: 16px; margin-bottom: 12px; flex-wrap: wrap; }
 .portfolio-count-badge {
   font-family: var(--ff-m); font-size: 11px; color: var(--cyan);
-  background: rgba(0,212,255,.08); border: 1px solid rgba(0,212,255,.2);
+  background: var(--cyan-dim); border: 1px solid var(--border);
   padding: 4px 14px; border-radius: 20px;
 }
 .portfolio-filters { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 26px; }
@@ -745,7 +770,7 @@ section { padding: 92px 64px; position: relative; }
 .portfolio-category {
   position: absolute; top: 12px; left: 12px; z-index: 2;
   font-family: var(--ff-m); font-size: 10px; letter-spacing: .05em; text-transform: uppercase;
-  color: var(--white); background: rgba(5,10,20,.72); backdrop-filter: blur(4px);
+  color: #eef2f7; background: rgba(5,10,20,.72); backdrop-filter: blur(4px);
   border: 1px solid rgba(255,255,255,.16); padding: 5px 12px; border-radius: 20px;
 }
 .portfolio-img { width: 100%; aspect-ratio: 16/9; object-fit: cover; filter: grayscale(25%); transition: transform .5s, filter .4s; }
@@ -789,7 +814,7 @@ section { padding: 92px 64px; position: relative; }
 .cert-heading-row { display: flex; align-items: center; gap: 16px; margin-bottom: 12px; flex-wrap: wrap; }
 .cert-count-badge {
   font-family: var(--ff-m); font-size: 11px; color: var(--cyan);
-  background: rgba(0,212,255,.08); border: 1px solid rgba(0,212,255,.2);
+  background: var(--cyan-dim); border: 1px solid var(--border);
   padding: 4px 14px; border-radius: 20px;
 }
 .cert-search-wrap { margin-bottom: 36px; position: relative; max-width: 420px; }
