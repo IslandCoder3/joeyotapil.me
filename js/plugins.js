@@ -469,6 +469,15 @@
       tools: ['HTML', 'CSS', 'JavaScript', 'Cursor AI']
     },
     {
+      img: 'images/classic-games.webp',
+      alt: 'Classic Games — an online arcade of 11 timeless browser games',
+      title: 'Classic Games',
+      url: 'https://islandcoder3.github.io/classic-games/',
+      category: 'Game Dev',
+      desc: 'An online arcade of 11 timeless browser games — Tetris, Chess, Snake, Minesweeper, and more — with favorites, high scores, and CPU opponents, all saved locally with no account needed.',
+      tools: ['HTML', 'CSS', 'JavaScript']
+    },
+    {
       img: 'images/ec-travel.webp',
       alt: 'EC Travel - Adventure Tours & Boarding Passes to Somewhere New',
       title: 'EC Travel',
