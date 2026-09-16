@@ -442,6 +442,33 @@
       tools: ['PHP', 'MySQL', 'HTML', 'CSS', 'JavaScript']
     },
     {
+      img: 'images/bsit.webp',
+      alt: 'BSIT Department - CEBU TECH. UNIVERSITY',
+      title: 'BSIT Department - CEBU TECH. UNIVERSITY',
+      url: 'https://bsit-ctu-tuburan.onrender.com/',
+      category: 'Education',
+      desc: 'Front-end development and maintenance for a university-scale website, translating design updates into responsive, cross-browser pages for thousands of daily visitors.',
+      tools: ['HTML', 'CSS', 'JavaScript']
+    },
+    {
+      img: 'images/wccis.webp',
+      alt: 'WCCIS — Web-Based College Course Information System',
+      title: 'WCCIS — Web-Based College Course Information System',
+      url: 'https://wccis.freedev.app/',
+      category: 'Education',
+      desc: 'Strand and course recommendation system for Senior High students — profiles interests, skills, and grades, then matches against the entry criteria a guidance office sets for every strand and course, with an admin console for editing those criteria.',
+      tools: ['PHP', 'MySQL', 'HTML', 'CSS', 'JavaScript']
+    },
+    {
+      img: 'images/tank-battle.webp',
+      alt: 'Tank Battle: Retro Edition — Vibe-Coded with Cursor AI',
+      title: 'Tank Battle: Retro Edition — Vibe-Coded with Cursor AI',
+      url: 'https://tank-battle-retro.onrender.com/',
+      category: 'GAME DEV',
+      desc: 'A rapid AI-assisted coding experiment turning a game concept into a playable retro tank battle — built with Cursor AI to explore fast ideation and playful UI over traditional dev cycles.',
+      tools: ['HTML', 'CSS', 'JavaScript', 'Cursor AI']
+    },
+    {
       img: 'images/ec-travel.webp',
       alt: 'EC Travel - Adventure Tours & Boarding Passes to Somewhere New',
       title: 'EC Travel',
@@ -458,24 +485,6 @@
       category: 'Travel & Tourism',
       desc: 'Adventure tour booking site with a reservation form, destination packages, filterable gallery, and customer reviews for a small-group travel outfit.',
       tools: ['HTML', 'CSS', 'JavaScript']
-    },
-    {
-      img: 'images/bsit.webp',
-      alt: 'BSIT Department - CEBU TECH. UNIVERSITY',
-      title: 'BSIT Department - CEBU TECH. UNIVERSITY',
-      url: 'https://bsit-ctu-tuburan.onrender.com/',
-      category: 'Education',
-      desc: 'Front-end development and maintenance for a university-scale website, translating design updates into responsive, cross-browser pages for thousands of daily visitors.',
-      tools: ['HTML', 'CSS', 'JavaScript']
-    },
-    {
-      img: 'images/tank-battle.webp',
-      alt: 'Tank Battle: Retro Edition — Vibe-Coded with Cursor AI',
-      title: 'Tank Battle: Retro Edition — Vibe-Coded with Cursor AI',
-      url: 'https://tank-battle-retro.onrender.com/',
-      category: 'GAME DEV',
-      desc: 'A rapid AI-assisted coding experiment turning a game concept into a playable retro tank battle — built with Cursor AI to explore fast ideation and playful UI over traditional dev cycles.',
-      tools: ['HTML', 'CSS', 'JavaScript', 'Cursor AI']
     },
     {
       img: 'images/cebeco3-engineering.webp',
