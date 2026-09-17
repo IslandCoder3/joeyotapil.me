@@ -401,16 +401,15 @@
   // Add as many projects as you have — just extend this array.
   // img: screenshot path · alt: image alt text · title: display label for the link
   // url: live site link · desc: 1-2 sentence summary of the work · tools: array of tags
-  //
-  // NOTE: the desc/tools below are placeholders inferred from the site names/screenshots —
-  // swap in the real scope of work and actual stack for each project before publishing.
+  // category: one of — Retail & Catalog · Brand & Marketing · Utilities & Infrastructure ·
+  //           Civic & Community · Education · Systems & Tools · Travel & Tourism · Game Dev
   const PROJECTS = [
     {
       img: 'images/infinite-skincare.webp',
       alt: 'INFINITE Skincare — marketing site for a Korean-inspired skincare brand',
       title: 'INFINITE Skincare',
       url: 'https://infinite-skincare.onrender.com/',
-      category: 'Business / E-commerce',
+      category: 'Brand & Marketing',
       desc: 'Marketing site for a Korean-inspired skincare brand spanning four product lines — White, Vida, O\u2019Lamour and Wellness — built around a real-customer testimonials wall (photo and video) instead of stock photography.',
       tools: ['HTML', 'CSS', 'JavaScript']
     },
@@ -419,7 +418,7 @@
       alt: 'Soft & Sweet Cakes - Kawaii Bakery in Cebu',
       title: 'Soft & Sweet Cakes',
       url: 'https://soft-and-sweet-cakes.onrender.com/',
-      category: 'Business / E-commerce',
+      category: 'Brand & Marketing',
       desc: 'Pastel kawaii-themed bakery site for a Cebu-based cake shop, built around a soft, playful visual identity with treat galleries, delivery info, and branch/contact details.',
       tools: ['HTML', 'CSS', 'JavaScript']
     },
@@ -428,8 +427,8 @@
       alt: 'Bayanihan LOB-DP',
       title: 'Localized Online Bayanihan for Disaster Preparedness',
       url: 'https://localized-online-bayanihan.infinityfree.me/',
-      category: 'Nonprofit / Community',
-      desc: 'Community disaster-preparedness platform built to help local groups coordinate emergency response; led a full public-facing redesign with a Philippine-inspired visual system.',
+      category: 'Civic & Community',
+      desc: 'Community disaster-preparedness platform built to help local groups coordinate emergency response, with a Philippine-inspired visual system across the public-facing site.',
       tools: ['PHP', 'MySQL', 'HTML', 'CSS', 'JavaScript']
     },
     {
@@ -437,7 +436,7 @@
       alt: 'Tuburan Graduate Tracer - Alumni Tracking & Community Platform',
       title: 'Tuburan Graduate Tracer',
       url: 'https://tuburan-graduate-tracer.ifree.page/',
-      category: 'Education / Alumni Community',
+      category: 'Systems & Tools',
       desc: 'Alumni tracking and community platform for graduates — career/job postings, event RSVPs, a community forum, a photo gallery, and an admin dashboard with live employment outcome reporting.',
       tools: ['PHP', 'MySQL', 'HTML', 'CSS', 'JavaScript']
     },
@@ -455,7 +454,7 @@
       alt: 'WCCIS — Web-Based College Course Information System',
       title: 'WCCIS — Web-Based College Course Information System',
       url: 'https://wccis.freedev.app/',
-      category: 'Education',
+      category: 'Systems & Tools',
       desc: 'Strand and course recommendation system for Senior High students — profiles interests, skills, and grades, then matches against the entry criteria a guidance office sets for every strand and course, with an admin console for editing those criteria.',
       tools: ['PHP', 'MySQL', 'HTML', 'CSS', 'JavaScript']
     },
@@ -464,7 +463,7 @@
       alt: 'Tank Battle: Retro Edition — Vibe-Coded with Cursor AI',
       title: 'Tank Battle: Retro Edition — Vibe-Coded with Cursor AI',
       url: 'https://tank-battle-retro.onrender.com/',
-      category: 'GAME DEV',
+      category: 'Game Dev',
       desc: 'A rapid AI-assisted coding experiment turning a game concept into a playable retro tank battle — built with Cursor AI to explore fast ideation and playful UI over traditional dev cycles.',
       tools: ['HTML', 'CSS', 'JavaScript', 'Cursor AI']
     },
@@ -500,7 +499,7 @@
       alt: 'CEBECO III Engineering Division — Cebu III Electric Cooperative',
       title: 'CEBECO III — Engineering Division',
       url: 'https://cebeco3-engineering.onrender.com/',
-      category: 'Business / Utilities',
+      category: 'Utilities & Infrastructure',
       desc: 'A static, engineering-themed site for CEBECO III\u2019s Engineering Division, built around an interactive one-line electrical diagram of the co-op\u2019s real service area across Toledo City and four western Cebu municipalities.',
       tools: ['HTML', 'CSS', 'JavaScript']
     },
@@ -509,7 +508,7 @@
       alt: 'HQ Phones — Current Inventory',
       title: 'HQ Phones',
       url: 'https://hq-phones.onrender.com/',
-      category: 'Business / E-commerce',
+      category: 'Retail & Catalog',
       desc: 'Phone inventory site for a resale shop — browsable catalog with full spec sheets per device, a compare tool, and an inquiry form since pricing is confirmed by staff rather than listed.',
       tools: ['HTML', 'CSS', 'JavaScript']
     },
@@ -518,7 +517,7 @@
       alt: "Family's Bakeshop — Fresh Breads in Toledo City, Cebu",
       title: "Family's Bakeshop",
       url: 'https://familys-bakeshop.onrender.com/',
-      category: 'Business / E-commerce',
+      category: 'Retail & Catalog',
       desc: 'Neighborhood panaderya site with a tappable menu that builds a running order slip, sent to the shop by text or email — plus a story section and location/contact details.',
       tools: ['HTML', 'CSS', 'JavaScript']
     },
@@ -563,7 +562,7 @@
       alt: 'Utility Bench — Tailwind CSS Learning Tool',
       title: 'Utility Bench',
       url: 'https://islandcoder3.github.io/tailwind-workshop/',
-      category: 'Education / Developer Tools',
+      category: 'Systems & Tools',
       desc: 'Interactive Tailwind CSS learning tool — 43 hands-on stations across a tiered curriculum, with a live code editor, real-time preview, and a class-by-class decoder that explains every utility as you type.',
       tools: ['HTML', 'CSS', 'JavaScript', 'Tailwind CSS']
     },
