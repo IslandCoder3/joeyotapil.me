@@ -1,0 +1,24 @@
+name: Deploy to InfinityFree
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.ftpupload.net }}
+          username: ${{ secrets.if0_42968508 }}
+          password: ${{ secrets.1S5JaL04lseL7C }}
+          protocol: ftp
+          port: 21
+          local-dir: ./
+          server-dir: /htdocs/
+          exclude: |
+            **/.git*
+            **/.git*/**
+            .github/**
+            README.md
