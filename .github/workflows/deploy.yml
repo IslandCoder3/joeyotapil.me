@@ -16,7 +16,7 @@ jobs:
           protocol: ftp
           port: 21
           local-dir: ./
-          server-dir: https://joeyotapil.freedev.app/htdocs/
+          server-dir: /joeyotapil.freedev.app/htdocs/
           exclude: |
             **/.git*
             **/.git*/**
