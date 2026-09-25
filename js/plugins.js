@@ -408,7 +408,7 @@
       img: 'images/infinite-skincare.webp',
       alt: 'INFINITE Skincare — marketing site for a Korean-inspired skincare brand',
       title: 'INFINITE Skincare',
-      url: 'https://infinite-skincare.onrender.com/',
+      url: 'https://infiniteskincare.infinityfreeapp.com/',
       category: 'Brand & Marketing',
       desc: 'Marketing site for a Korean-inspired skincare brand spanning four product lines — White, Vida, O\u2019Lamour and Wellness — built around a real-customer testimonials wall (photo and video) instead of stock photography.',
       tools: ['HTML', 'CSS', 'JavaScript']
