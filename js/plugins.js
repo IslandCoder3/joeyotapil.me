@@ -477,6 +477,15 @@
       tools: ['HTML', 'CSS', 'JavaScript']
     },
     {
+      img: 'images/umbra-css.webp',
+      alt: 'Umbra — ready-made CSS designs you can copy',
+      title: 'Umbra — Ready-Made CSS Designs',
+      url: 'https://islandcoder3.github.io/umbra-css/',
+      category: 'Systems & Tools',
+      desc: 'A gallery of ready-made CSS designs where you pick a style and copy the plain CSS, plus a studio of generators for building your own.',
+      tools: ['HTML', 'CSS', 'JavaScript']
+    },
+    {
       img: 'images/ec-travel.webp',
       alt: 'EC Travel - Adventure Tours & Boarding Passes to Somewhere New',
       title: 'EC Travel',
