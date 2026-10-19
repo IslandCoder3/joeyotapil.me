@@ -39,6 +39,7 @@ I went with a dark navy palette with cyan/violet accents, a monospace-and-displa
 | [INFINITE Skincare](https://infinite-skincare.onrender.com/) | Business / E-commerce | Marketing site for a Korean-inspired skincare brand spanning four product lines — White, Vida, O'Lamour and Wellness — built around a real-customer testimonials wall (photo and video) instead of stock photography. | HTML, CSS, JavaScript |
 | [WCCIS — Web-Based College Course Information System](https://wccis.freedev.app/) | Education | Strand and course recommendation system for Senior High students — profiles interests, skills, and grades, then matches against the entry criteria a guidance office sets for every strand and course, with an admin console for editing those criteria. | PHP, MySQL, HTML, CSS, JavaScript |
 | [Classic Games](https://islandcoder3.github.io/classic-games/) | Game Dev | A growing online arcade of timeless browser games — Tetris, Chess, Snake, Minesweeper, and more — with favorites, high scores, and CPU opponents, all saved locally with no account needed. | HTML, CSS, JavaScript |
+| [Fun Zone](https://islandcoder3.github.io/fun-zone/) | Education / Kids | Interactive learning playground for kids — 10 games covering math, memory, color mixing, spelling, counting, patterns, shapes, telling time, and logic, with difficulty levels, stars, and 14 unlockable badges. | HTML, CSS, JavaScript |
 
 ## Tech Stack
 

@@ -575,6 +575,15 @@
       desc: 'Interactive Tailwind CSS learning tool — 43 hands-on stations across a tiered curriculum, with a live code editor, real-time preview, and a class-by-class decoder that explains every utility as you type.',
       tools: ['HTML', 'CSS', 'JavaScript', 'Tailwind CSS']
     },
+    {
+      img: 'images/fun-zone.webp',
+      alt: 'Fun Zone — interactive learning playground for kids',
+      title: 'Fun Zone',
+      url: 'https://islandcoder3.github.io/fun-zone/',
+      category: 'Education',
+      desc: 'Interactive learning playground for kids — 10 games covering math, memory, color mixing, spelling, counting, patterns, shapes, telling time, and logic, with difficulty levels, stars, and 14 unlockable badges.',
+      tools: ['HTML', 'CSS', 'JavaScript']
+    },
 
     // { img: 'images/outputN.png', alt: '...', title: '...', url: '...', category: '...', desc: '...', tools: ['...'] },
   ];
