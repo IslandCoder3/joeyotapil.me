@@ -40,6 +40,7 @@ I went with a dark navy palette with cyan/violet accents, a monospace-and-displa
 | [WCCIS — Web-Based College Course Information System](https://wccis.freedev.app/) | Education | Strand and course recommendation system for Senior High students — profiles interests, skills, and grades, then matches against the entry criteria a guidance office sets for every strand and course, with an admin console for editing those criteria. | PHP, MySQL, HTML, CSS, JavaScript |
 | [Classic Games](https://islandcoder3.github.io/classic-games/) | Game Dev | A growing online arcade of timeless browser games — Tetris, Chess, Snake, Minesweeper, and more — with favorites, high scores, and CPU opponents, all saved locally with no account needed. | HTML, CSS, JavaScript |
 | [Fun Zone](https://islandcoder3.github.io/fun-zone/) | Education / Kids | Interactive learning playground for kids — 10 games covering math, memory, color mixing, spelling, counting, patterns, shapes, telling time, and logic, with difficulty levels, stars, and 14 unlockable badges. | HTML, CSS, JavaScript |
+| [CSS Lab](https://islandcoder3.github.io/css-lab/) | Education / Developer Tools | Interactive HTML and CSS course with 28 lessons of live, tweakable demos, 15 practice drills, a 9-level game and a quiz, ending in a capstone where you rebuild a full page yourself. | HTML, CSS, JavaScript |
 
 ## Tech Stack
 
