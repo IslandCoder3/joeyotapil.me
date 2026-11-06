@@ -584,6 +584,15 @@
       desc: 'Interactive learning playground for kids — 10 games covering math, memory, color mixing, spelling, counting, patterns, shapes, telling time, and logic, with difficulty levels, stars, and 14 unlockable badges.',
       tools: ['HTML', 'CSS', 'JavaScript']
     },
+    {
+      img: 'images/css-lab.webp',
+      alt: 'CSS Lab — learn HTML and CSS by doing with live demos, drills and a capstone',
+      title: 'CSS Lab — Learn CSS by Doing',
+      url: 'https://islandcoder3.github.io/css-lab/',
+      category: 'Systems & Tools',
+      desc: 'Interactive HTML and CSS course with 28 lessons of live, tweakable demos, 15 practice drills, a 9-level game and a quiz, ending in a capstone where you rebuild a full page yourself.',
+      tools: ['HTML', 'CSS', 'JavaScript']
+    },
 
     // { img: 'images/outputN.png', alt: '...', title: '...', url: '...', category: '...', desc: '...', tools: ['...'] },
   ];
